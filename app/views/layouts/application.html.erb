@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsChatTutorial</title>
-    <%= csp_meta_tag %>
-    <%= csrf_meta_tags %> 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+<head>
+  <title>Rails Chat Tutorial</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <%= render partial: 'shared/navigation_bar' %>
-          <div class="my-3">
-            <%= yield %>
-          </div>
-        </div>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <%= render partial: 'shared/navigation_bar' %>
+      <div class="my-3">
+        <%= yield %>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+</body>
 </html>
